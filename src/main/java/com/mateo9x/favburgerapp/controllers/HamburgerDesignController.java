@@ -2,11 +2,14 @@ package com.mateo9x.favburgerapp.controllers;
 
 import com.mateo9x.favburgerapp.model.Burger;
 import com.mateo9x.favburgerapp.model.Ingredient;
+import com.mateo9x.favburgerapp.model.Order;
 import lombok.extern.slf4j.Slf4j;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import java.util.Arrays;
 import java.util.List;
@@ -18,7 +21,7 @@ import java.util.stream.Collectors;
 public class HamburgerDesignController {
 
     @ModelAttribute
-    public String addIngredients(Model model){
+    public void addIngredients(Model model){
         List<Ingredient> ingredients = Arrays.asList(
                 new Ingredient("WOL", "Beaf", Ingredient.Type.PROTEIN),
                 new Ingredient("KUR", "Chicken", Ingredient.Type.PROTEIN),
@@ -35,7 +38,7 @@ public class HamburgerDesignController {
             model.addAttribute(type.toString().toLowerCase(),
                     filterByType(ingredients, type));
         }
-        return "order";
+
     }
 
     @GetMapping
@@ -51,5 +54,11 @@ public class HamburgerDesignController {
                 .stream()
                 .filter(x -> x.getType().equals(type))
                 .collect(Collectors.toList());
+    }
+
+    @PostMapping
+    public String processDesign(Order order){
+        log.info("Przetwarzanie: " + order);
+        return "redirect:/orders/current";
     }
 }
