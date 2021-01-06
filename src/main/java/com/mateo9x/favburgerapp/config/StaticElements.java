@@ -1,4 +1,4 @@
-package com.mateo9x.favburgerapp.tools;
+package com.mateo9x.favburgerapp.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;

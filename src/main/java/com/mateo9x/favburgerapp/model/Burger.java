@@ -4,14 +4,15 @@ import com.sun.istack.NotNull;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import java.util.List;
 
 @Data
 @NoArgsConstructor
 public class Burger {
 
-    @NotNull
     private String name;
- //   @Size(min=1, message="You must choose at least 1 ingredient")
+
     private List<String> ingredients;
 }
