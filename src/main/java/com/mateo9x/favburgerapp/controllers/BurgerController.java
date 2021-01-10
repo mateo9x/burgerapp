@@ -2,6 +2,8 @@ package com.mateo9x.favburgerapp.controllers;
 
 import com.mateo9x.favburgerapp.model.Burger;
 import com.mateo9x.favburgerapp.model.Ingredient;
+import com.mateo9x.favburgerapp.model.User;
+import com.mateo9x.favburgerapp.repository.UserRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -17,7 +19,6 @@ import java.util.stream.Collectors;
 @Slf4j
 @Controller
 public class BurgerController {
-
 
     @ModelAttribute
     public void addIngredients(Model model) {
@@ -51,8 +52,13 @@ public class BurgerController {
             return "design";
         }
         else {
-            return "userData";
+            return "redirect:/userData";
         }
+    }
+
+    @GetMapping("/orderStatus")
+    public String showStatus(){
+        return "order";
     }
 
     private List<Ingredient> filterByType(

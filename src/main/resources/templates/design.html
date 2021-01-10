@@ -14,14 +14,14 @@
 <body>
 
 
-<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
-    <h5 class="my-0 mr-md-auto font-weight-normal"><a class="homelink" th:href="@{/}">Burger App!</a></h5>
+<div id="nav" class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
+    <h5 class="my-0 mr-md-auto font-weight-normal"><a class="home-button" href="#" th:href="@{/}">Burger App!</a></h5>
     <a class="btn btn-outline-primary" href="#">Sign up</a>
 </div>
 
-<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center" id="formDesign">
+<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center" id="formDesign" >
 
-    <img th:src="@{/../static/burger.jpg}" style="width:40%;height:30%;border-radius:50%;margin-bottom:5%"/>
+    <img th:src="@{/../static/burger.jpg}" style="width:40%;height:30%;border-radius:50%;margin-bottom:2%"/>
     <h3>Design your Burger!</h3>
 
 
@@ -73,8 +73,8 @@
             <input type="text" th:field="*{name}"/>
             <br/>
         </div>
-        <div class="start-button">
-            <a href="#" th:href="@{/userData}"> <button id="start" class="pure-button pure-button-primary" >Submit</button></a>
+        <div class="submit-button">
+            <a href="#" th:href="@{/userData}"> <button id="submit" class="pure-button pure-button-primary" >Submit</button></a>
         </div>
     </form>
 

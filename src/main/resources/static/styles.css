@@ -34,12 +34,50 @@ html {
     padding:10%;
     font-size:1.2rem;
 }
+#submit {
+    background-color: dodgerblue;
+    color: white;
+    border-radius: 12px;
+    padding: 8%;
+    font-size: 1.2rem;
+    margin-bottom: 0%!important;
+}
+#proceed {
+    background-color: dodgerblue;
+    color: white;
+    border-radius: 12px;
+    padding: 2%;
+    font-size: 1.2rem;
+    margin-bottom: 0%!important;
+}
+.proceed-button{
+
+    margin-auto;
+    margin-top:10%;
+}
+.pure-control-group{
+    text-align:left;
+    margin-left:35%;
+}
+.table-user{
+    width:40%;
+    margin:auto;
+    text-align:left;
+}
+.submit-button{
+    width:15%;
+    margin:auto;
+    margin-bottom:0%!important;
+}
 #formDesign{
     font-size: 14px !important;
+
 }
 .homelink,.homelink:link{
    color:black !important;
 }
+
+
 .grid{
     text-align:left;
     margin-left:35%;
@@ -48,4 +86,15 @@ html {
 .burger-name{
     margin-top:3%;
     margin-bottom:3%;
+}
+body{
+    background-image: url("burger_background.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size:2000px 1000px;
+    color:white;
+}
+.home-button:link,.home-button,.home-button:active{
+    color:black !important;
 }
